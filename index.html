@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Música Libre | Subí tus rolas sin intermediarios</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Una plataforma para artistas independientes: sube tu música gratis, recibe regalías directas y sin impuestos. Arte libre.">
+</head>
+<body class="bg-gray-950 text-white font-sans">
+
+  <!-- Header -->
+  <header class="bg-black border-b border-gray-800 px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-green-400">🎧 Música Libre</h1>
+    <nav class="space-x-4 text-sm">
+      <a href="#explorar" class="hover:text-green-400">Explorar</a>
+      <a href="#subir" class="hover:text-green-400">Subir Música</a>
+      <a href="#cuenta" class="hover:text-green-400">Mi Cuenta</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+    <h2 class="text-4xl font-bold mb-4">La música es arte, no mercancía.</h2>
+    <p class="text-lg mb-6 max-w-xl mx-auto">Sube tu música. Cobra directo. Sin comisiones. Sin impuestos. Porque el arte no debe pagar impuestos ni pasar por intermediarios.</p>
+    <a href="#subir" class="bg-green-500 text-black font-semibold px-6 py-3 rounded hover:bg-green-400 transition-all">
+      Subir mi rola 🎵
+    </a>
+  </section>
+
+  <!-- Explorar -->
+  <section id="explorar" class="px-6 py-12 max-w-6xl mx-auto">
+    <h3 class="text-2xl font-bold mb-6 text-green-400">🎤 Artistas Destacados</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-gray-800 p-4 rounded hover:shadow-xl hover:scale-105 transition-all">
+        <img src="https://via.placeholder.com/300" alt="Artista" class="rounded mb-2">
+        <p class="font-bold">Khane</p>
+        <p class="text-sm text-gray-400">Trap Mexa</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded hover:shadow-xl hover:scale-105 transition-all">
+        <img src="https://via.placeholder.com/300" alt="Artista" class="rounded mb-2">
+        <p class="font-bold">Dhemian</p>
+        <p class="text-sm text-gray-400">Alt-Rap</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded hover:shadow-xl hover:scale-105 transition-all">
+        <img src="https://via.placeholder.com/300" alt="Artista" class="rounded mb-2">
+        <p class="font-bold">Roxxy</p>
+        <p class="text-sm text-gray-400">Dark Pop</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded hover:shadow-xl hover:scale-105 transition-all">
+        <img src="https://via.placeholder.com/300" alt="Artista" class="rounded mb-2">
+        <p class="font-bold">Endiablados</p>
+        <p class="text-sm text-gray-400">Freestyle Urbano</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subir música -->
+  <section id="subir" class="bg-gray-900 px-6 py-16 text-center">
+    <h3 class="text-3xl font-bold mb-6 text-green-400">Sube tu música sin filtros</h3>
+    <p class="text-sm max-w-lg mx-auto text-gray-300 mb-8">
+      Aquí no necesitas disquera ni pagarle a nadie. Tú mandas. Sube tu rola, añade portada, y coloca tu link directo para recibir apoyo.
+    </p>
+    <form class="max-w-xl mx-auto text-left bg-gray-800 p-6 rounded">
+      <label class="block mb-2">Nombre del track</label>
+      <input type="text" placeholder="Ej. Mi Rola Libre" class="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600">
+
+      <label class="block mb-2">Subir archivo MP3/WAV</label>
+      <input type="file" class="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600">
+
+      <label class="block mb-2">Link directo de pago (PayPal, Kofi, CLABE, Cripto, etc.)</label>
+      <input type="text" placeholder="https://paypal.me/miusuario" class="w-full p-2 mb-6 rounded bg-gray-700 border border-gray-600">
+
+      <button class="bg-green-500 hover:bg-green-400 text-black font-bold px-4 py-2 rounded w-full">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Mi cuenta -->
+  <section id="cuenta" class="px-6 py-12 text-center">
+    <h3 class="text-2xl font-bold text-green-400 mb-4">Tu Cuenta de Artista</h3>
+    <p class="text-gray-400">Aquí podrás gestionar tu perfil, ver reproducciones y editar tus rolas (próximamente).</p>
+    <div class="mt-6">
+      <button class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded">Iniciar sesión</button>
+      <button class="ml-2 bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded">Crear cuenta</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-gray-800 px-6 py-6 text-center text-sm text-gray-400">
+    © 2025 Música Libre. Plataforma independiente. <br/>
+    <span class="text-green-400">Sin disquera, sin impuestos, sin filtros.</span><br/>
+    <a href="#" class="underline hover:text-white">Términos y Condiciones</a>
+  </footer>
+
+</body>
+</html>
