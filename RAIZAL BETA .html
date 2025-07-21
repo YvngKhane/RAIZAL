@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAIZAL – Música Libre</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #0f172a, #1e293b);
+      color: #f1f5f9;
+      padding: 2rem;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .file-input {
+      border: 2px dashed #64748b;
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="text-4xl font-bold mb-6 text-center text-teal-300">RAIZAL 🎶</h1>
+  <p class="text-center mb-10 text-slate-300">Música libre. Sin algoritmos. Sin impuestos. Sin disqueras.</p>
+
+  <div class="glass">
+    <h2 class="text-2xl font-semibold mb-4 text-emerald-400">🔊 Subir Sencillo</h2>
+    <form>
+      <input type="text" placeholder="Nombre del sencillo" class="block w-full mb-3 p-2 rounded text-black"/>
+      <input type="file" accept="audio/*" class="file-input mb-3 w-full"/>
+      <input type="file" accept="image/*" class="file-input mb-3 w-full" />
+      <button class="bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded text-white">Subir</button>
+    </form>
+  </div>
+
+  <div class="glass">
+    <h2 class="text-2xl font-semibold mb-4 text-cyan-400">💽 Subir Álbum Completo</h2>
+    <form>
+      <input type="text" placeholder="Nombre del álbum" class="block w-full mb-3 p-2 rounded text-black"/>
+      <input type="file" accept="audio/*" multiple class="file-input mb-3 w-full"/>
+      <input type="file" accept="image/*" class="file-input mb-3 w-full"/>
+      <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-white">Subir Álbum</button>
+    </form>
+  </div>
+
+  <div class="glass">
+    <h2 class="text-2xl font-semibold mb-4 text-yellow-400">🚨 Reclamar Canción Plagiada</h2>
+    <form>
+      <input type="text" placeholder="Título de la canción que fue plagiada" class="block w-full mb-3 p-2 rounded text-black"/>
+      <textarea placeholder="Explica por qué es un plagio" class="block w-full mb-3 p-2 rounded text-black"></textarea>
+      <button class="bg-yellow-600 hover:bg-yellow-700 px-4 py-2 rounded text-white">Enviar reclamo</button>
+    </form>
+  </div>
+
+  <div class="glass text-center">
+    <p class="text-slate-300">🌟 Puedes guardar artistas, seguir sus perfiles, importar tus playlists de Spotify y personalizar tu experiencia 🎧</p>
+  </div>
+</body>
+</html>
