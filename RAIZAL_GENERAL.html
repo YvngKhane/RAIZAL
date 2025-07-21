@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAIZAL – Música Libre</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #0f172a, #1e293b);
+      color: #f1f5f9;
+      padding: 2rem;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    audio {
+      width: 100%;
+      margin-top: 1rem;
+    }
+    .artist-profile {
+      background: #1e293b;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="text-4xl font-bold mb-6 text-center text-teal-300">RAIZAL 🎶</h1>
+  <p class="text-center mb-10 text-slate-300">La plataforma de música libre para artistas independientes. Súbelo todo, sin intermediarios.</p>
+
+  <!-- EJEMPLO DE PERFIL -->
+  <div class="artist-profile">
+    <h2 class="text-2xl font-bold text-cyan-400 mb-2">🎤 Perfil del Artista</h2>
+    <img src="https://via.placeholder.com/800x200.png?text=Portada+del+Artista" alt="Portada del artista" class="rounded mb-4">
+    <p class="mb-2">Color de fondo y fuente personalizable por cada usuario.</p>
+    <p class="text-sm text-gray-300">Cada artista puede mostrar su portada, estilo visual y mantener su música sonando mientras navegas por su perfil.</p>
+  </div>
+
+  <!-- ÁLBUM -->
+  <div class="glass">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-400">💿 Álbum: Ejemplo de Álbum</h2>
+    <img src="https://via.placeholder.com/400x400.png?text=Portada+del+Álbum" alt="Portada del álbum" class="w-48 mb-4 rounded">
+    <ul class="space-y-4">
+      <li>
+        <strong>Track 1:</strong> Canción de Ejemplo
+        <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+      </li>
+      <li>
+        <strong>Track 2:</strong> Otra Rola Libre
+        <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+      </li>
+    </ul>
+  </div>
+
+  <!-- SINGLE -->
+  <div class="glass">
+    <h2 class="text-2xl font-semibold mb-4 text-emerald-400">🔥 Sencillo Destacado</h2>
+    <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"></audio>
+  </div>
+
+</body>
+</html>
