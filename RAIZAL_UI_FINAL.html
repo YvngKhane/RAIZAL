@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAIZAL – Libera tu música</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #0f172a, #1e293b);
+      color: #f1f5f9;
+      padding: 2rem;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    input[type="text"], input[type="file"] {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+    }
+    .title {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #0ea5e9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PORTADA PRINCIPAL -->
+  <section class="text-center mb-16">
+    <h1 class="title">RAIZAL 🎧</h1>
+    <p class="text-gray-300 mt-4 max-w-2xl mx-auto text-lg">Sube, comparte y escucha música sin filtros ni contratos. El arte no debe pagar impuestos. Bienvenido a la revolución sonora.</p>
+  </section>
+
+  <!-- BUSCADOR -->
+  <div class="glass max-w-3xl mx-auto mb-10">
+    <h2 class="text-2xl font-semibold text-sky-400 mb-4">🔍 Buscar música</h2>
+    <input type="text" id="searchInput" onkeyup="searchTracks()" placeholder="Buscar por canción, artista o álbum..." />
+    <ul id="trackList" class="mt-4 space-y-2">
+      <li class="hidden">Resultados aparecerán aquí...</li>
+    </ul>
+  </div>
+
+  <!-- FORMULARIO SENCILLO -->
+  <div class="glass max-w-3xl mx-auto mb-10">
+    <h2 class="text-2xl font-semibold text-green-400 mb-4">📤 Subir un sencillo</h2>
+    <form>
+      <input type="text" placeholder="Nombre del artista" class="mb-3" />
+      <input type="text" placeholder="Título del sencillo" class="mb-3" />
+      <input type="file" accept="audio/*" class="mb-3" />
+      <input type="file" accept="image/*" class="mb-3" />
+      <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">Subir sencillo</button>
+    </form>
+  </div>
+
+  <!-- FORMULARIO ÁLBUM -->
+  <div class="glass max-w-3xl mx-auto mb-10">
+    <h2 class="text-2xl font-semibold text-yellow-400 mb-4">📀 Subir un álbum completo</h2>
+    <form id="albumForm">
+      <input type="text" placeholder="Nombre del artista" class="mb-3" />
+      <input type="text" placeholder="Nombre del álbum" class="mb-3" />
+      <input type="file" accept="image/*" class="mb-3" />
+      <div id="tracksContainer" class="mb-3 space-y-3">
+        <div>
+          <input type="text" placeholder="Título de la canción 1" class="mb-2" />
+          <input type="file" accept="audio/*" class="mb-2" />
+        </div>
+      </div>
+      <button type="button" onclick="addTrack()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mb-3">Agregar otra canción</button><br>
+      <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded">Subir álbum</button>
+    </form>
+  </div>
+
+  <script>
+    function searchTracks() {
+      const input = document.getElementById("searchInput");
+      const filter = input.value.toLowerCase();
+      const list = document.getElementById("trackList").getElementsByTagName("li");
+      for (let i = 0; i < list.length; i++) {
+        const txt = list[i].innerText.toLowerCase();
+        list[i].style.display = txt.includes(filter) ? "" : "none";
+      }
+    }
+
+    function addTrack() {
+      const container = document.getElementById("tracksContainer");
+      const count = container.children.length + 1;
+      const div = document.createElement("div");
+      div.innerHTML = `
+        <input type="text" placeholder="Título de la canción ${count}" class="mb-2" />
+        <input type="file" accept="audio/*" class="mb-2" />
+      `;
+      container.appendChild(div);
+    }
+  </script>
+
+</body>
+</html>
